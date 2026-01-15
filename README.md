@@ -65,9 +65,10 @@ SPARC data from Lelli et al. (2016): http://astroweb.cwru.edu/SPARC/
 
 If you use this code, please cite the paper:
 ```
-Dudas, D. R. (2026). Complexity Binding Theory: A Complete Framework 
-for Galaxy Dynamics Without Dark Matter Particles. arXiv:TBD
+Dudas, D. R. (2026). Complexity Binding Theory: A Complete Framework for Galaxy Dynamics Without Dark Matter Particles. Zenodo. https://doi.org/10.5281/zenodo.18262088
 ```
+
+
 
 ## License
 
