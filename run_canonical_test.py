@@ -1,16 +1,6 @@
 """
-CANONICAL CBT EVALUATION
-========================
-
 This is the official, reproducible implementation of Complexity Binding Theory
 testing on the SPARC database.
-
-IMPORTANT PARAMETER ACCOUNTING:
-- Newton: 1 free parameter (M/L scale)
-- CBT: 1 free parameter (M/L scale) + universal α(R) formula (NO per-galaxy tuning)
-
-The α(R) formula is fixed and universal. Only the baryonic mass-to-light ratio
-is fitted per galaxy, same as in Newtonian fitting.
 
 Usage:
     python run_canonical_test.py [--use-btf-vmax]
