@@ -72,4 +72,4 @@ Dudas, D. R. (2026). Complexity Binding Theory: A Complete Framework for Galaxy 
 
 ## License
 
-MIT License - see LICENSE file.
+MIT License
