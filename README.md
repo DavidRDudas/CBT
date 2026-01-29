@@ -1,6 +1,6 @@
 # Complexity Binding Theory (CBT)
 
-https://doi.org/10.5281/zenodo.18421774
+[https://doi.org/10.5281/zenodo.18421774](https://doi.org/10.5281/zenodo.18422001)
 
 **A framework for galaxy dynamics without dark matter particles**
 
@@ -150,7 +150,7 @@ If you use this work, please cite:
   title={Complexity Binding Theory: A Complete Framework for Galaxy Dynamics Without Dark Matter Particles},
   author={Dudas, David R.},
   year={2025},
-  doi={(https://doi.org/10.5281/zenodo.18421774)}
+  doi={[(https://doi.org/10.5281/zenodo.18421774)](https://doi.org/10.5281/zenodo.18422001)}
 }
 ```
 
