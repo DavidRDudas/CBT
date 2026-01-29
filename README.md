@@ -14,10 +14,11 @@ CBT proposes that organized structures generate effective gravitational binding 
 |--------|---------------|-------|
 | **MOND acceleration** | a₀ = cH₀/2e = 1.20×10⁻¹⁰ m/s² | **100%** |
 | **CMB matter density** | Ω_eff = 0.315 | **100%** |
+| **Freeman surface density** | Σ₀ = 137 M☉/pc² | **98%** |
 | **Galaxy rotation** | 171 SPARC galaxies | **85%** success |
 | **Gravitational lensing** | Multi-scale validation | ✓ |
 
-**One derived parameter (β = 2e ≈ 5.44) unifies four independent domains of gravitational physics.**
+**One derived parameter (β = 2e ≈ 5.44) unifies FIVE independent domains of gravitational physics.**
 
 ---
 
