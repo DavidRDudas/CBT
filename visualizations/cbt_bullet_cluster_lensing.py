@@ -32,7 +32,7 @@ G_PHYS = 4.302e-6     # G in (kpc)(km/s)²/M_sun
 
 # CBT parameters from the paper
 ALPHA = 0.55          # Complexity binding strength (galaxy scale)
-BETA = 6.0            # Lensing coupling factor
+BETA = 2 * np.e       # Lensing coupling factor = 2e ≈ 5.44 (GR factor × entropy base)
 
 # Simulation grid
 GRID_SIZE = 200       # Grid resolution
