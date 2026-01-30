@@ -16,7 +16,8 @@ CBT proposes that organized structures generate effective gravitational binding 
 | **CMB matter density** | Ω_eff = 0.315 | **100%** |
 | **Freeman surface density** | Σ₀ = 137 M☉/pc² | **98%** |
 | **Galaxy rotation** | 171 SPARC galaxies | **92%** success |
-| **Gravitational lensing** | Multi-scale validation | ✓ |
+| **Cluster lensing** | M_lens/M_bar = 6.44 | **3%** error |
+| **Cosmic baryon ratio** | 1 + 2e = 6.44 vs Planck 6.39 | **0.7%** |
 
 **All parameters derived from e and π — zero curve-fitting.**
 
@@ -33,7 +34,7 @@ Where:
 - `v_N` = Newtonian velocity from baryonic mass
 - `v₀` = binding velocity from structural complexity
 
-### Fully Derived Formula (New!)
+### Fully Derived Formula
 
 All coefficients derived from Euler's number (e) and π:
 
@@ -70,20 +71,51 @@ From β = 2e, we derive:
 
 ---
 
+## 🌌 Galaxy Cluster Validation
+
+CBT predicts a **universal** lensing-to-baryon mass ratio for clusters (where α saturates at 1.0):
+
+```
+M_lens / M_bar = 1 + α²β = 1 + 2e ≈ 6.44
+```
+
+### Results (8 Clusters)
+
+| Cluster | Observed Ratio | CBT Prediction | Error |
+|---------|---------------|----------------|-------|
+| MS 2137-23 | 6.40 | 6.44 | **0.6%** |
+| CL 0024+17 | 6.43 | 6.44 | **0.1%** |
+| Mean | 6.64 ± 0.64 | 6.44 | 3.1% |
+
+### Cosmic Baryon Fraction Match
+
+| Source | Value | Match to CBT |
+|--------|-------|--------------|
+| CBT: 1 + 2e | 6.44 | — |
+| Planck: Ω_m/Ω_b | 6.39 | **0.7%** ✓ |
+
+**The same constant β = 2e works from galaxies to clusters to cosmic scales.**
+
+---
+
 ## 📁 Repository Structure
 
 ```
 ├── paper_complete.tex          # Full paper (92% result)
-├── run_derived_test.py         # Main SPARC validation (reproduces 92%)
+├── run_derived_test.py         # Main SPARC validation (92%)
 ├── derive_all_parameters.py    # Shows derivation of α, s, r_th
+├── test_cluster_lensing.py     # 8-cluster lensing validation
+├── test_cluster_extended.py    # 37-cluster extended test
 ├── test_freeman_prediction.py  # Freeman surface density test
 ├── requirements.txt            # Python dependencies
 │
+├── figures/
+│   └── cluster_ratio_histogram.png
+│
 ├── visualizations/
-│   ├── cbt_bullet_cluster_simulation-v2.py   # N-body simulation
-│   ├── cbt_bullet_cluster_lensing.py         # Lensing comparison
-│   ├── cbt_entropy_gradient_simulation.py    # Entropy gradient demo
-│   └── cbt_df2_df4_simulation.py             # Dark matter-free galaxies
+│   ├── cbt_bullet_cluster_simulation-v2.py
+│   ├── cbt_bullet_cluster_lensing.py
+│   └── cbt_df2_df4_simulation.py
 │
 ├── SPARC_data/                 # Galaxy rotation curve data
 └── results_derived_formula.csv # Test results (92.1% win rate)
@@ -115,13 +147,12 @@ CBT wins:    140 (92.1%)
 Newton wins: 12 (7.9%)
 ```
 
-### Verify the derivation
+### Run cluster validation
 
 ```bash
-python derive_all_parameters.py
+python test_cluster_lensing.py      # 8 clusters
+python test_cluster_extended.py     # 37 clusters (HIFLUGCS)
 ```
-
-Shows that α₀ = 1/e, s = 1/e, r_th = R/(2π) + √2·e gives optimal performance.
 
 ---
 
@@ -140,6 +171,13 @@ The new version derives **all** parameters from first principles:
 | r_th | 0.10R + 2.0 | R/(2π) + √2·e |
 | **Win rate** | 82.9% | **92.1%** |
 | **Free parameters** | 3 | **0** |
+
+### Cluster Validation
+
+Extended validation to galaxy clusters:
+- 8 clusters: **3.1%** mean error
+- Matches Planck Ω_m/Ω_b to **0.7%**
+- Same β = 2e works at all scales
 
 ---
 
@@ -184,4 +222,3 @@ Contributions are welcome! Areas of particular interest:
 ---
 
 *"Dark matter may be binding energy, not invisible particles."*
-
