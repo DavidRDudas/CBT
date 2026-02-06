@@ -244,5 +244,3 @@ Contributions are welcome! Areas of particular interest:
 - Independent observational tests
 
 ---
-*"Dark matter may be binding energy, not invisible particles."*
----
