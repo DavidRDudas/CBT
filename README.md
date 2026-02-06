@@ -214,7 +214,7 @@ If you use this work, please cite:
   title={Complexity Binding Theory: A Complete Framework for Galaxy Dynamics Without Dark Matter Particles},
   author={Dudas, David R.},
   year={2026},
-  doi={[10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.18421774](https://doi.org/10.5281/zenodo.18422001)}
+  doi={(https://doi.org/10.5281/zenodo.18421774](https://doi.org/10.5281/zenodo.18422001)}
 }
 ```
 
@@ -244,10 +244,5 @@ Contributions are welcome! Areas of particular interest:
 - Independent observational tests
 
 ---
-
 *"Dark matter may be binding energy, not invisible particles."*
-
-
 ---
-
-*"Dark matter may be binding energy, not invisible particles."*
