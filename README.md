@@ -1,8 +1,11 @@
 # Complexity Binding Theory (CBT)
 
-`PAPER 1: [Complexity Binding Theory: A Complete Framework for Galaxy Dynamics Without Dark Matter Particles](https://doi.org/10.5281/zenodo.18422001)`
-`PAPER 2: [Thermodynamic Derivation of Born's Rule and Extensions of Complexity Binding Theory to Quantum and Black Hole Regimes](https://doi.org/10.5281/zenodo.18613507)`
-`PAPER 3: [Deriving MOND from Complexity Binding Theory: Field Equation Solutions and Falsifiable Predictions](https://doi.org/10.5281/zenodo.18616672)`
+PAPER 1: [Complexity Binding Theory: A Complete Framework for Galaxy Dynamics Without Dark Matter Particles](https://doi.org/10.5281/zenodo.18422001)  
+
+PAPER 2: [Thermodynamic Derivation of Born's Rule and Extensions of Complexity Binding Theory to Quantum and Black Hole Regimes](https://doi.org/10.5281/zenodo.18613507)  
+
+PAPER 3: [Deriving MOND from Complexity Binding Theory: Field Equation Solutions and Falsifiable Predictions](https://doi.org/10.5281/zenodo.18616672)  
+
 
 **A zero-parameter framework for galaxy dynamics without dark matter particles**
 
