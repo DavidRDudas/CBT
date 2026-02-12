@@ -8,7 +8,7 @@ CBT proposes that organized structures generate effective gravitational binding 
 
 ---
 
-## 🎯 Key Results
+## Key Results
 
 | Domain | CBT Prediction | Match |
 |--------|---------------|-------|
@@ -23,7 +23,7 @@ CBT proposes that organized structures generate effective gravitational binding 
 
 ---
 
-## 🔬 The Core Equations
+## The Core Equations
 
 ```
 v² = v_N² + v₀²
@@ -52,7 +52,7 @@ r_th = R/(2π) + √2·e kpc  # Threshold radius
 
 ---
 
-## 🧪 The β = 2e Unification
+## The β = 2e Unification
 
 The light-binding coupling constant connects multiple domains:
 
@@ -98,7 +98,7 @@ M_lens / M_bar = 1 + α²β = 1 + 2e ≈ 6.44
 
 ---
 
-## 🌡️ CMB Consistency Check
+## CMB Consistency Check
 
 CBT predicts the cosmic matter density:
 
@@ -122,7 +122,7 @@ python test_cmb_peaks.py  # Run the consistency check
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 ├── paper_complete.tex          # Full paper (92% result)
@@ -147,7 +147,7 @@ python test_cmb_peaks.py  # Run the consistency check
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -180,7 +180,7 @@ python test_cluster_extended.py     # 37 clusters (HIFLUGCS)
 
 ---
 
-## 📊 What's New (January 2026)
+## What's New (January 2026)
 
 ### Fully Derived Formula
 
@@ -220,7 +220,7 @@ If you use this work, please cite:
 
 ---
 
-## 📚 Key References
+## Key References
 
 - **SPARC Database**: Lelli et al. (2016) - Galaxy rotation curve data
 - **MOND**: Milgrom (1983) - Modified Newtonian Dynamics
@@ -229,13 +229,13 @@ If you use this work, please cite:
 
 ---
 
-## 📄 License
+## License
 
 MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Areas of particular interest:
 - CMB power spectrum predictions (full C_ℓ, not just Ω_m)
