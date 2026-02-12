@@ -1,6 +1,8 @@
 # Complexity Binding Theory (CBT)
 
-[https://doi.org/10.5281/zenodo.18421774](https://doi.org/10.5281/zenodo.18422001)
+PAPER 1: [Complexity Binding Theory: A Complete Framework for Galaxy Dynamics Without Dark Matter Particles](https://doi.org/10.5281/zenodo.18422001)
+PAPER 2: [Thermodynamic Derivation of Born's Rule and Extensions of Complexity Binding Theory to Quantum and Black Hole Regimes](https://doi.org/10.5281/zenodo.18613507)
+PAPER 3: [Deriving MOND from Complexity Binding Theory: Field Equation Solutions and Falsifiable Predictions](https://doi.org/10.5281/zenodo.18616672)
 
 **A zero-parameter framework for galaxy dynamics without dark matter particles**
 
@@ -271,7 +273,25 @@ If you use this work, please cite:
   title={Complexity Binding Theory: A Complete Framework for Galaxy Dynamics Without Dark Matter Particles},
   author={Dudas, David R.},
   year={2026},
-  doi={(https://doi.org/10.5281/zenodo.18421774](https://doi.org/10.5281/zenodo.18422001)}
+  doi={https://doi.org/10.5281/zenodo.18422001}
+}
+```
+
+```bibtex
+@article{dudas2026qg,
+  title={Thermodynamic Derivation of Born's Rule and Extensions of Complexity Binding Theory to Quantum and Black Hole Regimes},
+  author={Dudas, David R.},
+  year={2026},
+  doi={https://doi.org/10.5281/zenodo.18613507}
+}
+```
+
+```bibtex
+@article{dudas2026field,
+  title={Deriving MOND from the Binding Field: Predictions and Cosmological Tests of Complexity Binding Theory},
+  author={Dudas, David R.},
+  year={2026},
+  doi={https://doi.org/10.5281/zenodo.18616672}
 }
 ```
 
