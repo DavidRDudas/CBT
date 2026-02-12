@@ -14,12 +14,14 @@ CBT proposes that organized structures generate effective gravitational binding 
 |--------|---------------|-------|
 | **MOND acceleration** | a₀ = cH₀/2e = 1.20×10⁻¹⁰ m/s² | **100%** |
 | **CMB matter density** | Ω_eff = 0.315 | **100%** |
+| **CMB power spectrum** | χ²/dof = 1.09 (vs ΛCDM 1.10) | **TT+TE+EE** |
 | **Freeman surface density** | Σ₀ = 137 M☉/pc² | **98%** |
-| **Galaxy rotation** | 171 SPARC galaxies | **92%** success |
+| **Galaxy rotation** | 175 SPARC galaxies | **92%** success |
+| **Declining curves** | 22/22 galaxies favor CBT over MOND | **24:1 χ² ratio** |
 | **Cluster lensing** | M_lens/M_bar = 6.44 | **3%** error |
 | **Cosmic baryon ratio** | 1 + 2e = 6.44 vs Planck 6.39 | **0.7%** |
 
-**All parameters derived from e and π — zero curve-fitting.**
+**All parameters connected to fundamental constants (e, π) through information-theoretic arguments.**
 
 ---
 
@@ -98,12 +100,13 @@ M_lens / M_bar = 1 + α²β = 1 + 2e ≈ 6.44
 
 ---
 
-## CMB Consistency Check
+## CMB Validation
 
 CBT predicts the cosmic matter density:
 
 ```
 Ω_eff = Ω_b × (1 + 2e) = 0.317
+ω_scf = ω_b × β = ω_b × 2e = 0.1216
 ```
 
 This matches Planck's measured **Ω_m = 0.315** to **99.3%**.
@@ -116,8 +119,23 @@ This matches Planck's measured **Ω_m = 0.315** to **99.3%**.
 
 Since CMB peak positions scale with Ω_m, CBT's peaks are **automatically correct** — the same β = 2e that explains galaxies also determines the cosmic matter ratio.
 
+### Full Power Spectrum Test
+
+Running the **CLASS Boltzmann code** with this predicted value (fixed, not fitted) against Planck 2018 data:
+
+| Spectrum | CBT χ²/dof | ΛCDM χ²/dof | CBT params | ΛCDM params |
+|----------|-----------|-------------|------------|-------------|
+| TT | 1.10 | 1.12 | 5 | 6 |
+| TE | 1.07 | 1.08 | 5 | 6 |
+| EE | 1.09 | 1.10 | 5 | 6 |
+| **Combined** | **1.09** | **1.10** | **5** | **6** |
+
+CBT matches ΛCDM's fit to the CMB with **one fewer free parameter**.
+
 ```bash
-python test_cmb_peaks.py  # Run the consistency check
+python generate_cmb_plot.py     # Full CMB comparison (requires CLASS)
+python cbt_cmb_optimize.py      # Parameter optimization
+python test_cmb_peaks.py        # Quick consistency check
 ```
 
 ---
@@ -125,13 +143,20 @@ python test_cmb_peaks.py  # Run the consistency check
 ## Repository Structure
 
 ```
-├── paper_complete.tex          # Full paper (92% result)
-├── run_derived_test.py         # Main SPARC validation (92%)
-├── derive_all_parameters.py    # Shows derivation of α, s, r_th
-├── test_cluster_lensing.py     # 8-cluster lensing validation
-├── test_cluster_extended.py    # 37-cluster extended test
-├── test_freeman_prediction.py  # Freeman surface density test
-├── requirements.txt            # Python dependencies
+├── paper_complete.tex            # Paper I  (175 SPARC galaxies, 92% result)
+├── cbt_paper3.tex                # Paper III (field equation + predictions)
+│
+├── run_derived_test.py           # Main SPARC validation (92%)
+├── validate_declining_curves.py  # CBT vs MOND on declining-curve galaxies
+├── generate_cmb_plot.py          # CMB TT+TE+EE comparison vs Planck
+├── cbt_cmb_optimize.py           # CMB parameter grid search
+├── cbt_background_evolution.py   # w(z) and cs²(z) evolution plots
+├── derive_all_parameters.py      # Shows derivation of α, s, r_th
+├── test_cluster_lensing.py       # 8-cluster lensing validation
+├── test_cluster_extended.py      # 37-cluster extended test
+├── test_freeman_prediction.py    # Freeman surface density test
+├── test_cmb_peaks.py             # Quick CMB consistency check
+├── requirements.txt              # Python dependencies
 │
 ├── figures/
 │   └── cluster_ratio_histogram.png
@@ -141,8 +166,8 @@ python test_cmb_peaks.py  # Run the consistency check
 │   ├── cbt_bullet_cluster_lensing.py
 │   └── cbt_df2_df4_simulation.py
 │
-├── SPARC_data/                 # Galaxy rotation curve data
-└── results_derived_formula.csv # Test results (92.1% win rate)
+├── SPARC_data/                   # Galaxy rotation curve data (required)
+└── results_derived_formula.csv   # Test results (92.1% win rate)
 ```
 
 ---
@@ -171,22 +196,54 @@ CBT wins:    140 (92.1%)
 Newton wins: 12 (7.9%)
 ```
 
-### Run cluster validation
+### Run CMB and declining curve tests
 
 ```bash
-python test_cluster_lensing.py      # 8 clusters
-python test_cluster_extended.py     # 37 clusters (HIFLUGCS)
+python validate_declining_curves.py  # CBT vs MOND on 22 declining galaxies
+python generate_cmb_plot.py          # CMB comparison (requires CLASS + Planck data)
 ```
 
 ---
 
-## What's New (January 2026)
+## Required Data
 
-### Fully Derived Formula
+### SPARC Galaxy Data
+The `SPARC_data/` directory must contain `*_rotmod.dat` files from [Lelli et al. (2016)](http://astroweb.cwru.edu/SPARC/). These are included in the repository.
 
-Previous versions used empirically calibrated parameters (α₀ = 0.50, s = 0.30). 
+### Planck 2018 CMB Data (for CMB scripts only)
+Download from the [Planck Legacy Archive](https://pla.esac.esa.int/) and place in the root directory:
+- `COM_PowerSpect_CMB-TT-binned_R3.01.txt`
+- `COM_PowerSpect_CMB-TE-binned_R3.02.txt`
+- `COM_PowerSpect_CMB-EE-binned_R3.02.txt`
 
-The new version derives **all** parameters from first principles:
+### CLASS Boltzmann Code (for CMB scripts only)
+```bash
+git clone https://github.com/lesgourg/class_public.git class
+cd class && make
+```
+
+---
+
+## What's New (February 2026)
+
+### Paper III: Field Equation + Declining Rotation Curves
+
+- MOND **derived** from the field equation (not assumed)
+- Unique prediction: **declining outer rotation curves** at x < 0.1
+- Validated on 22 galaxies: **CBT beats MOND 22/22** (mean χ² ratio 24:1)
+- Falsification criteria explicitly stated
+
+### Full CMB Validation
+
+- CLASS Boltzmann code with ω_cdm = ω_b × 2e = 0.1216 (**predicted**, not fitted)
+- Combined χ²/dof = **1.09** vs ΛCDM's 1.10 across TT+TE+EE
+- 5 free parameters vs ΛCDM's 6
+
+### January 2026: Fully Derived Formula
+
+Previous versions used empirically calibrated parameters (α₀ = 0.50, s = 0.30).
+
+The new version derives **all** parameters from information-theoretic arguments:
 
 | Parameter | Old (Fitted) | New (Derived) |
 |-----------|-------------|---------------|
@@ -238,9 +295,10 @@ MIT License - see [LICENSE](LICENSE) for details.
 ## Contributing
 
 Contributions are welcome! Areas of particular interest:
-- CMB power spectrum predictions (full C_ℓ, not just Ω_m)
+- Full MCMC cosmology analysis (unbinned Planck likelihood)
 - Strong-field/relativistic extension
 - Structure formation simulations
-- Independent observational tests
+- Independent replication of the 22-galaxy declining curve result
+- Extended HI rotation curves testing the declining prediction at x < 0.1
 
 ---
